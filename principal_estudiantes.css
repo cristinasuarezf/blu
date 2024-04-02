@@ -1,0 +1,436 @@
+
+    html{
+        font-size: 16px;
+        background-color: rgb(228,255,239);
+    } 
+    
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0%;
+    }
+
+    body {
+        /*width: 95%;*/
+        width: 97vw;
+        margin: 2em auto;
+        font: .9rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header{
+        grid-area: header;
+        color: rgb(96,142,254);
+        text-align: center;
+        font-size: 35px;
+    }
+    nav{
+        grid-area: nav;
+    }
+
+    h2{
+        color: black;
+        text-align: center;
+        font-size: 30px;
+        font-style:unset;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/
+    }
+    #psi{ /*h4 cuadro citas con psicologo*/
+        font-size: 30px;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #info{ /*h4 de ejercicios*/
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #general{ /*Descripción*/
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        font-style: italic;
+    }
+    #again{ /*Ejercicios para volver a hacer*/
+        font-size: 20px;
+    }
+    #nuevo{ /*Nuevos ejercicios*/
+        font-size: 20px;
+    }
+    #ejercicio{ /*Botones para ejercicios*/
+        width: 150px;
+        height: 160px;
+        background-color:  aliceblue;
+        border: 2px black;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    #ejercicio>a{
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        font-size: 15px;
+    }
+    #hora{ /*hora calendario*/
+        font-size: 20px;
+    }
+    #barra_h{
+        background-color: rgb(133, 166, 250);
+        width: 90vw;
+        margin: 10px auto;
+        border-radius: 10px;
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+    }
+    #barra_h ul{
+        list-style: none;
+        background-color:rgb(133, 166, 250);
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .psic{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 19px;
+        font-weight: 500;
+        color: aliceblue;
+    }
+    li{
+        color: rgb(88, 101, 173);
+        padding: 10px;
+        margin: 5px;
+    }
+    li a{
+        text-decoration: none;
+        color: rgb(88, 101, 173);
+        font-size: 1rem;
+    }
+    .menu-horizontal>.n1{
+        display: inline-block;
+        margin-left:  40px;
+        margin-right: 40px;
+
+    }
+    .menu-horizontal li{
+        background-color: rgb(238,238,238);
+        border-radius: 10px;
+
+    }
+    .submenu1{
+        min-width: 100px;
+    } 
+    .submenu2{
+        position: absolute;
+        right: 200px;
+    }
+    .submenu1, .submenu2{
+        display: none;
+        position: absolute;
+        z-index: 2;
+    }
+    .menu-horizontal>li:hover .submenu1{
+        display: block;
+    }
+    .menu-horizontal>.n1:hover{
+        background-color: rgb(238,238,238);
+    }
+    .submenu1>li:hover .submenu2{
+        display: block;
+    }
+    .submenu1>li:hover{
+        background-color: rgb(238,238,238);
+    }
+    
+    .container{
+        display: grid;
+        width: 95%;
+        grid-template-areas:  "Ejer   Citas";
+        grid-template-columns: 500px 1fr 500px;
+        grid-gap: 20px;
+    }
+    .container > section {
+        padding: 25px;
+    }
+    .Ejer{
+        grid-area: Ejer;
+        margin: auto auto;
+    }
+    .Citas{
+        grid-area: Citas;
+        margin: auto auto;
+        margin-left: 9em;
+
+    }
+
+    table{
+        width: 500px;    
+    }
+    
+    .img_ejer{
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    #calend{
+        padding: 10px;
+        width: 100px;
+        margin: 20px;
+        float: right;
+        border-radius: 10px;
+    }
+
+    #gc{
+        /*padding: 15px;*/
+        width: 100px;
+        height: 100px;
+        /*margin: 20px;*/
+        border-radius: 10px;
+    }
+
+    #test{
+        display: inline-block;
+        border-radius: 15px; /*Esquinas redondeadas del bóton*/
+        background-color: rgb(96,142,254);
+        border: none;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 19px; 
+        padding: 19px; 
+        width: 400px;
+        cursor: pointer;
+        margin: 4px; 
+    }
+    #test:hover{
+        background-color: rgb(158, 217, 236);
+        color: white;
+    }
+
+/*CELULARES*/
+    @media screen and (max-width: 640px) {
+    #psi{ /*h4 cuadro citas con psicologo*/
+        font-size: 20px;
+    }
+    
+    #info{ /*h4 de ejercicios*/
+        font-size: 20px;
+    }
+
+    #general{ /*Descripción*/
+        font-size: 15px;
+    }
+
+    #ejercicio{ /*Botones para ejercicios*/
+        width: 100px;
+        height: 110px;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    #ejercicio>a{
+        text-decoration: none;
+        font-size: 20px;
+        font-size: 15px;
+    }
+
+    #hora{ /*hora calendario*/
+        font-size: 15px;
+
+    }
+    #barra_h{
+        width: 97vw;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    #barra_h ul{
+        padding: 5px;
+    }
+
+    .psic{
+        font-size: 15px;
+        font-weight: 300;
+    }
+    
+    li{
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .menu-horizontal>.n1{
+        margin-left:  20px;
+        margin-right: 20px;
+    }
+
+    .container{
+        grid-template-areas:  "Ejer"
+                            "Citas";
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    
+    .container > section {
+        padding: 0px;
+        margin: 0px;
+        margin-left: 6.5%;
+    }
+    
+    .Ejer{
+        grid-area: Ejer;
+        margin: none;
+        width: 95vw;
+
+    }
+    .Citas{
+        grid-area: Citas;
+        margin: none;
+        margin-left: none;
+        width: 95vw;
+
+    }
+    
+    table{
+        width: 85vw;    
+    }
+
+    #calend{
+        padding: 5px;
+        width: 100px;
+        margin: 5px;
+    }
+    
+    .agendaa{
+           align-content: center;
+ 
+     width:50% !important;  
+    }
+
+    #gc{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .img_ejer{
+        width: 50px;
+        border-radius: 10px;
+    }
+
+    #test{
+        font-size: 18px; 
+        padding: 19px; 
+        width: 300px;
+        margin: 2px; 
+    }
+}
+
+/*TABLETS*/
+    @media screen and (min-width: 641px) and (max-width: 1200px) {
+    #psi{ /*h4 cuadro citas con psicologo*/
+        font-size: 50px;
+    }
+    
+    #info{ /*h4 de ejercicios*/
+        font-size: 25px;
+    }
+
+    #general{ /*Descripción*/
+        font-size: 18px;
+    }
+
+    #ejercicio{ /*Botones para ejercicios*/
+        width: 225px;
+        height: 225px;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+    #ejercicio>a{
+        text-decoration: none;
+        font-size: 20px;
+        font-size: 15px;
+    }
+
+    #hora{ /*hora calendario*/
+        font-size: 18px;
+
+    }
+    #barra_h{
+        width: 100vw;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    #barra_h ul{
+        padding: 5px;
+    }
+
+    .psic{
+        font-size: 18px;
+        font-weight: 500px;
+    }
+    
+    li{
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .menu-horizontal>.n1{
+        margin-left:  30px;
+        margin-right: 30px;
+    }
+
+    .container{
+        grid-template-areas:  "Ejer"
+                            "Citas";
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+    
+    .container > section {
+        padding: 0px;
+        margin: 0px;
+        margin-left: 6.5%;
+    }
+    
+    .Ejer{
+        grid-area: Ejer;
+        margin: none;
+        width: 98vw;
+
+    }
+    .Citas{
+        grid-area: Citas;
+        margin: none;
+        margin-left: none;
+        width: 98vw;
+
+    }
+    
+    table{
+        width: 90vw;    
+    }
+
+    #calend{
+        padding: 5px;
+        width: 100px;
+        margin: 10px;
+    }
+
+    #gc{
+        width: 160px;
+        height: 160px;
+    }
+    
+    .img_ejer{
+        width: 160px;
+        border-radius: 10px;
+    }
+
+    #test{
+        font-size: 19px; 
+        padding: 19px; 
+        width: 400px;
+        margin: 5px; 
+    }
+}

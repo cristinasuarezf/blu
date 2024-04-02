@@ -1,0 +1,143 @@
+html{
+    font-size: 22px;
+    background-color: rgb(228,255,239);
+} 
+
+header{
+    grid-area: header;
+}
+section{
+    grid-area: section;
+    margin:0px;
+    padding: 0px;   
+}
+
+.container{
+    display: grid;
+    width: 98vw;
+    grid-template-areas:    "header"
+                            "section";
+    grid-template-columns:  1fr;
+    grid-gap: 5px;
+    }
+    
+ input{
+     background-color: rgb(228,255,239);
+     border: none;
+     color: black;
+ }
+ 
+ #opciones{
+      background-color: white;
+ }
+ 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    width: 97vw;
+    margin: 1em auto;
+    font: .9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.id_cita, .id_psicologo{
+    opacity: 0;
+}
+
+#input_idCita, #input_idPsic{
+    opacity: 0;
+}
+
+.subtitulo{
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(96, 142, 254);
+}
+
+.texto{
+    width: 220px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.formulario{ /*botones de enviar o reset*/
+    background-color: #eeeeeeff;
+    background: linear-gradient(top, rgba(238, 238, 238, 0.219), #eeeeeeff);
+    border: 1px solid #eeeeeeff;
+    border-bottom: 1px solid #eeeeeeff;
+    box-shadow: inset 0 1px 0 0 rgba(238, 238, 238, 0.219);
+    color: rgb(96, 142, 254);
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(238, 238, 238, 0.219);
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;  
+    border-radius: 3px;
+    width: 100%;
+    margin:0px;
+    font-weight: bold; 
+    padding: 6px 20px;
+    
+/*    margin-right: 0;
+    margin-left: auto;
+    display: block;*/
+
+}
+
+.formulario:hover{
+    border-color:rgb(193, 210, 255);
+    transition: .3s;
+
+    opacity: .85;
+    cursor: pointer;
+}
+
+.formulario:active{
+    border: 1px solid rgba(238, 238, 238, 0.219);
+    box-shadow: 0 0 10px 5px rgb(184, 183, 183) inset;
+    transition: .3s;
+}
+
+.titulos{
+    font-weight: bold;
+    font-size: 20px
+}
+
+h2 {
+    color: rgb(96, 142, 254);
+}
+
+
+
+/*CELULARES        media querys*/
+    @media screen and (max-width: 640px){
+    body {
+        width: 97vw;
+        margin: 1em auto;
+        font: .9rem;
+        background-color: rgb(500,255,400); 
+    }
+    
+    .container{
+        width: 50vw;
+        grid-template-areas:    "header"
+                                "section";
+        grid-template-columns:  1fr;
+        grid-gap: 10px;
+    }
+    
+    header{
+        font-size:50px;
+    }
+}
+/*TABLETS        media querys*/
+    @media screen and (min-width: 641px) and (max-width: 1280px) {
+    
+}
+    
+/*.formulario { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #006699;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; }
+.formulario:hover { text-decoration: none;border-color: #006699; color: #FFFFFF; background: none; background-color:#00557F;}
+*/

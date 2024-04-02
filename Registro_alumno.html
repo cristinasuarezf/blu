@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Registro_alumno.css">
+    <link rel="shortcut icon" href="imagenes/logo.png" />
+    <link rel="stylesheet" href="dialog.css">
+
+    <head>
+        <title>Nuevo Usuario</title>
+    </head>
+
+    <body>
+        <h1>REGISTRARSE</h1>
+        <form>
+            <div class="container">
+                <div>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" size="30"><br>
+                    <br>
+                    <label for="born">Fecha de Nacimiento:</label><br>
+                    <input type="date" id="fecha" name="fecha" min="1970-01-01" max="2030-07-09" size="30"><br>
+                    <br>
+                    <label>Número de control:</label><br>
+                    <input type="text" id="NC" name="NC" size="30"><br>
+                    <br>
+                    <label>Correo Electronico</label><br>
+                    <input type="email" id="mail" name="mail" size="30">&nbsp;<br>
+                    <br>
+                    <label for="pass" class="hijo">Crear Contraseña:</label><br>
+                    <input type="password" id="pass" name="pass" size="30">&nbsp;
+
+                </div>
+                <div>
+                    <label for="ap1">Primer apellido:</label><br>
+                    <input type="text" id="ap1" name="ap1"  size="30" >&nbsp;<br>
+                    <br>
+                    <label for="tel">Télefono:</label><br>
+                    <input type="text" id="tel" name="tel" >&nbsp;<br>
+                    <br>
+                    <label>Carrera</label><br>
+                        <select id="carrera" name="carrera" style="border-radius: 5px;
+                        font-size: 20px;
+                        padding: 10px;
+                        width: 190px;
+                        margin: 5px;">
+                            <option value="0">Seleccione</option>
+                            <option value="1">Ingenería en Informática</option>
+                            <option value="2">Ingenería en Sistemas</option>
+                        </select>&nbsp;<br>
+                    <br>
+                    <label>Confirmar Correo Electrónico</label><br>
+                    <input type="email" id="cmail" name="cmail" size="25"><br>
+                    <br>
+                    <label for="pass" class="hijo">Confirmar Contraseña:</label><br>
+                    <input type="password" id="passC" name="passC" size="25">&nbsp;<br>
+                    <br>
+                </div>                    
+                <div>
+                    <label for="ap2">Segundo apellido</label><br>
+                    <input type="text" id="ap2" name="ap2" >&nbsp;<br>
+                    
+                    <br><label>Género</label><br>
+                    <select id="genero" name="genero" style="border-radius: 5px;
+                    font-size: 20px;
+                    padding: 10px;
+                    width: 190px;
+                    margin: 5px;">
+                        <option value="1">Seleccione</option>
+                        <option value="2">Femenino</option>
+                        <option value="3">Masculino</option>
+                        <option value="4">Otro</option>
+                    </select>&nbsp;<br>
+                    <br>
+                    <br>
+                    <button id="registrar">Registrar</button>
+                </div>
+                       
+            </div>
+        </form>
+
+        <dialog id="dialogo">        
+            <p>Cuenta Registrada</p>
+            <p>Ahora puedes ingresar a la pagina principal</p>  
+            <a href="principal_estudiantes.html"><button class="enviar" id="aceptar" onclick="añadir('modernps')">Aceptar</button></a>  
+        <dialog> 
+
+    </body>
+    <script src="Registro_alumno.js"></script>
+</html>        

@@ -1,0 +1,210 @@
+html{
+    font-size: 25px;
+    background-color: rgb(228,255,239);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    width: 95%;
+    /* max-width: 10px;*/
+    margin: 2em auto;
+    font: .9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "header   header  "   /*celular: una columna*/
+                            "aside    aside     "
+                            "footer    footer     ";
+    grid-row-gap: 2rem;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    
+}
+.container>.hijos{
+    border-radius: 5px;
+    padding: 10px;
+
+}
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;         /*centrado verticalmente      display:flex;    align-items: center*/
+    justify-content: center;
+}
+aside{
+    grid-area: aside;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    display: grid;
+    grid-area: section;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    grid-area: footer;
+}
+#titulo{
+    grid-area: titulo;
+}
+img{
+    width: 500px;
+    border-color: rgb(96,142,254);
+}
+h2{
+    color: rgb(96,142,254);
+}
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 25px;
+}
+li{   
+    color: rgb(170, 170, 170);
+}
+p{
+    text-align: justify;
+    margin: 50px;
+    border: 1px solid none;
+    color: rgb(170, 170, 170);
+}
+#imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.registrar{
+    background-color:rgb(96,142,254);
+    background: linear-gradient(top, rgba(96, 141, 254, 0.63), rgb(96,142,254));
+    border: 1px solid rgb(96,142,254);
+    border-bottom: 1px solid rgb(96,142,254);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0  rgba(96, 141, 254, 0.63);
+    color: white;
+    font-weight: bold; 
+    font-size: 20px;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(96, 141, 254, 0.63);
+}
+button.registrar:hover {
+    opacity:.85;
+    cursor: pointer;  
+}
+button.registrar:active {
+    border: 1px solid rgba(96, 141, 254, 0.63);  
+    box-shadow: 0 0 10px 5px rgb(0, 57, 201) inset; 
+}
+
+button.ver{
+    background-color:#eeeeeeff;
+    background: linear-gradient(top, rgba(238, 238, 238, 0.219),#eeeeeeff);
+    border: 1px solid #eeeeeeff;
+    border-bottom: 1px solid #eeeeeeff;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0  rgba(238, 238, 238, 0.219);
+    color: rgb(96,142,254);
+    font-weight: bold; 
+    font-size: 20px;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(238, 238, 238, 0.219);
+}
+button.ver:hover {
+    opacity:.85;
+    cursor: pointer;  
+}
+button.ver:active {
+    border: 1px solid rgba(238, 238, 238, 0.219);  
+    box-shadow: 0 0 10px 5px rgb(184, 183, 183) inset; 
+}
+.ver{
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+}
+.video{
+    width:55vw;
+    height:515px;
+}
+
+/*CELULARES        media querys*/
+@media screen and (max-width: 640px){
+     html{
+        font-size: 20px;
+    }
+    body{
+        width: 100vw;
+        margin: 1em auto;
+        font: .5rem;
+    }
+    .container{
+        grid-template-areas: "header"
+                              "aside"
+                              "section"
+                              "footer";
+        grid-template-columns: 1fr;
+        grid-gap:5px;
+    }
+    p{
+        color: rgb(170, 170, 170);
+        font-size: .8rem;
+    }
+    header{
+        display: flex;
+    }
+    li{
+        color: rgb(170, 170, 170);
+        font-size: .8rem;
+    }
+    h2{
+        font-size: 1.4rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1 rem;
+    }
+    img{
+        width: 300px;
+    }
+    .video{
+        width:90vw;
+        height:500px;
+    }
+}
+
+/*TABLETS        media querys*/
+@media screen and (min-width: 641px) and (max-width: 1280px){
+    p{
+        color: rgb(170, 170, 170);
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1 rem;
+    }
+    li{
+        color: rgb(170, 170, 170);
+        font-size: 1rem;
+    }
+    .video{
+    width:90vw;
+    height:515px;
+    }
+}
+    

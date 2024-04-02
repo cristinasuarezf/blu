@@ -1,0 +1,154 @@
+
+    html{
+        background-color: rgb(228,255,239);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        text-align: center;
+        font-weight: 10;
+        font-size: 60px;
+        font-style:inherit;
+        color: rgb(96,142,254);
+    }
+    #enviar{
+        display: inline-block;
+        border-radius: 5px;
+        background-color: rgb(96,142,254);
+        border: none;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+        width: 150px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+    #usuario{
+        border-radius: 25px;
+        text-align: center;
+        border: none;
+        font-size: 20px; /*Tamaño de letra*/
+        padding: 10px; /*Grueso de alto del input */
+        width: 300px; /*Largo del input por la página*/
+        margin: 5px; /*Grueso del input*/
+    }
+    #pass{
+        border-radius: 25px;
+        text-align: center;
+        border: none;
+        font-size: 20px;
+        padding: 10px;
+        width: 300px;
+        margin: 5px;
+    }
+    #olvide{
+        /*rgb(238,238,238) --> boton rgb(83,131,254) -->letra*/
+        display: inline-block;
+        border-radius: 5px;
+        background-color: rgb(238,238,238);
+        border: none;
+        color: rgb(83,131,254);
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+    #nuevo{
+        display: inline-block;
+        border-radius: 5px;
+        background-color: rgb(238,238,238);
+        border: none;
+        color: rgb(83,131,254);
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+    #nuevo:hover{
+        background-color: rgb(55, 141, 170);
+        color: white;
+    }
+    #olvide:hover{
+        background-color: rgb(55, 141, 170);
+        color: white;
+    }
+    #enviar:hover{
+        background-color: rgb(27, 84, 230);
+        color: white;
+    }
+    .container{
+        text-align: center;
+    }
+    .btn{
+        text-decoration: none;
+        background-color: rgb(228,255,239);
+        /*background-color: rgb(3, 250, 102);*/
+        border: 0px;
+        border-radius: 25px;
+        padding: 5px;
+        margin: 5px;
+        height: 40px;
+        display: inline-block;
+    }
+    img{
+        width:30px; 
+        padding-top: 15px;
+    }
+    .imgnone{
+        opacity: 0;
+    }
+    
+    /*CELULARES*/
+    @media screen and (max-width: 640px) {
+    #barra_h{
+        width: 98vw;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    #barra_h ul{
+        padding: 5px;
+    }
+
+    li{
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .menu-horizontal>.n1{
+        margin-left:  20px;
+        margin-right: 20px;
+    }
+}
+/*TABLETS*/
+    @media screen and (min-width: 641px) and (max-width: 1200px) {
+    #barra_h{
+        width: 100vw;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    #barra_h ul{
+        padding: 5px;
+    }
+    
+    li{
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .menu-horizontal>.n1{
+        margin-left:  30px;
+        margin-right: 30px;
+    }
+
+
+}
+ 

@@ -1,0 +1,13 @@
+.cabecera{
+    width: 300 mm;
+    background-color: rgb(96, 142, 254); 
+    font-weight: bold;
+}
+
+.boton{
+   padding-top: 10px;
+}
+.col{
+    border: black 5px solid;
+}
+
