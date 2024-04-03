@@ -27,8 +27,8 @@
                             <th>Num Control</th><th>Nombre</th><th>Apellido Paterno</th><th>Apellido Materno</th><th>Correo</th><th>Celular</th><th>Genero</th><th>Carrera</th>
                         </tr>
                         <?php        
-                            $mysqli = new mysqli("localhost","id20568436_isa","Facin121302!","id20568436_blu");
-                            //mysqli('localhost','root', '', 'blu')
+                    $mysqli = new mysqli("localhost","root","","blu");
+                    //mysqli('localhost','root', '', 'blu')
                             $mysqli->set_charset("utf8");
                             $query = $mysqli->query("SELECT * FROM alumno");
                             while($dat = $query ->fetch_object()){
@@ -55,8 +55,8 @@
                             <th>Num Control</th><th>Nombre</th><th>Apellido Paterno</th><th>Apellido Materno</th><th>Correo</th><th>Celular</th>
                         </tr>
                         <?php        
-                            $mysqli = new mysqli("localhost","id20568436_isa","Facin121302!","id20568436_blu");
-                            //new mysqli('localhost','root', '', 'blu')
+                    $mysqli = new mysqli("localhost","root","","blu");
+                    //new mysqli('localhost','root', '', 'blu')
                             $mysqli->set_charset("utf8");
                             $query = $mysqli->query("SELECT * FROM psicologo");
                             while($dat = $query ->fetch_object()){

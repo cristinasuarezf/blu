@@ -35,7 +35,7 @@
                         $NC = $_GET['numControl'];
                         $idCita = $_GET['idCita'];
                         $id= $_SESSION['usuario']; // <--- This stuff is god
-                        $mysqli = new mysqli("localhost","id20568436_isa","Facin121302!","id20568436_blu");
+                        $mysqli = new mysqli("localhost","root","","blu");
                         // $mysqli = new mysqli('localhost','root', '', 'blu');
                         $mysqli->set_charset("utf8");
                         $query = $mysqli->query("SELECT * FROM alumno where numControl='".$NC."'");   

@@ -49,7 +49,7 @@
 
                 
                 <?php        
-                    $mysqli = new mysqli("localhost","id20568436_isa","Facin121302!","id20568436_blu");
+                    $mysqli = new mysqli("localhost","root","","blu");
                     //$mysqli = new mysqli('localhost','root', '', 'blu');
                     $mysqli->set_charset("utf8");
                     $NumControl= $_SESSION['usuario']; // <--- This stuff is god

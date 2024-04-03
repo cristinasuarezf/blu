@@ -25,7 +25,7 @@
                     <table>
                     <?php
                         $id = $_GET['id'];
-                        $mysqli = new mysqli("localhost","id20568436_isa","Facin121302!","id20568436_blu");
+                        $mysqli = new mysqli("localhost","root","","blu");
                         //'localhost','root', '', 'blu'
                         $mysqli->set_charset("utf8");
                         $query = $mysqli->query("SELECT al.nombre, al.apellido1, al.apellido2, al.carrera , al.correoInstitucional,
