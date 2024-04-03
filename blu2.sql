@@ -38,24 +38,6 @@ CREATE TABLE `alumno` (
   `carrera` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `alumno`
---
-
-INSERT INTO `alumno` (`numControl`, `nombre`, `apellido1`, `apellido2`, `correoInstitucional`, `celular`, `genero`, `carrera`) VALUES
-(4865, 'Venustiano', 'Carranza', 'Garza', 'lVenusCarr@chihuahua2.tecnm.mx', '6271520142', 'F', 'SISTEMAS'),
-(12345, 'CRISTINA', 'FRANCO', 'TERRAZAS', 'cfrancosuarez@hotmail.com', '6141974031', 'F', 'SISTEMAS'),
-(20550123, 'Lin', 'Zermeño', 'Betancourt', 'cizermeno@gmail.com', '6142737852', 'O', 'INFORMATICA'),
-(20550359, 'Alexia', 'Mireles', 'Maldonado', 'alexia_elf@outlook.com', '6142813924', 'F', 'SISTEMAS'),
-(20550387, 'Kaleb', 'Ruelas', 'Loo', '20550387@gmail.com', '6141301166', 'M', 'SISTEMAS'),
-(20550395, 'Alan', 'Montes', 'Silva', 'alanjms15@gmail.com', '6143854835', 'M', 'SISTEMAS'),
-(20550409, 'José Pablo', 'Aguirre', 'Rivera', 'josepabloaguirre02@gmail.com', '614 342 0338', 'M', 'SISTEMAS'),
-(20550731, 'Cristina', 'Suárez', 'Franco', '20550731@gmail.com', '6143336699', 'F', 'INFORMATICA'),
-(20550733, 'Adriana', 'Medina', 'Nuñez', '20550733@gmail.com', '6142754274', 'F', 'INFORMATICA'),
-(20550748, 'Fernanda', 'Vázquez', 'Muñoz', '20550748@gmail.com', '6143575600', 'F', 'INFORMATICA'),
-(20550789, 'Jimmy', 'Ortega', 'Razo', 'l20550789@mail.com', '6145236970', 'M', 'INFORMATICA'),
-(69874587, 'Jazmin', 'Ramos', 'Terrazas', 'L69874587@chihuahua2.tecnm.mx', '6145879632', 'F', 'INFORMATICA'),
-(96548736, 'Andrea', 'López', 'García', 'L96548736@chihuahua2.tecnm.mx', '6141876541', 'F', 'SISTEMAS');
 
 --
 -- Disparadores `alumno`
@@ -91,12 +73,6 @@ CREATE TABLE `bitacora` (
   `tel_ant` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `bitacora`
---
-
-INSERT INTO `bitacora` (`usuario`, `actividad`, `fecha`, `ID`, `nombre`, `apellidoP`, `apellidoM`, `correo`, `telefono`, `nom_ant`, `apellidoP_ant`, `apellidoM_ant`, `correo_ant`, `tel_ant`) VALUES
-('root@localhost', 'Alta', '2023-05-17 12:59:05', 4865, 'Venustiano', 'Carranza', 'Garza', 'lVenusCarr@chihuahua2.tecnm.mx', '6271520142', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -112,16 +88,6 @@ CREATE TABLE `consulta` (
   `hora` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `consulta`
---
-
-INSERT INTO `consulta` (`idconsulta`, `NumControl`, `idPsicologo`, `fecha`, `hora`) VALUES
-(181, 20550748, 36223552, NULL, NULL),
-(191, 20550748, 36223552, NULL, NULL),
-(192, 20550731, 36223552, NULL, NULL),
-(193, 20550395, 45678945, NULL, NULL),
-(194, 20550748, 36223552, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -135,23 +101,6 @@ CREATE TABLE `cuenta_alumno` (
   `pass` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `cuenta_alumno`
---
-
-INSERT INTO `cuenta_alumno` (`idCuentaA`, `numcontrol`, `pass`) VALUES
-(4, 20550748, '12345'),
-(5, 20550733, '123456'),
-(6, 20550731, '12345'),
-(7, 20550387, '12345'),
-(14, 20550789, '1245'),
-(15, 96548736, '12345'),
-(16, 69874587, '12345'),
-(17, 12345, 'CARLOSELI23'),
-(18, 20550123, 'Popipupe1234'),
-(19, 20550409, 'Jp4gu1rr3'),
-(20, 20550359, 'j@5h&tyl3r'),
-(21, 20550395, 'a1234');
 
 -- --------------------------------------------------------
 
@@ -254,35 +203,6 @@ CREATE TABLE `reporteejercicios` (
   `comentario` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `reporteejercicios`
---
-
-INSERT INTO `reporteejercicios` (`idAlumnoEjercicio`, `fecha`, `calificacion`, `idEjercicio`, `NumControl`, `comentario`) VALUES
-(1006, '02/12/22', 2, 50005, 20550748, 'bien'),
-(1007, '04/12/22', 1, 50006, 20550748, 'mal'),
-(1008, '05/12/22', 5, 50007, 20550748, 'Chido'),
-(1009, '06/12/22', 5, 50007, 20550748, 'Me siento mas tranquila'),
-(1015, '06/12/22', 4, 50005, 20550748, 'Me siento mejor'),
-(1017, '07/12/22', 2, 50005, 20550748, 'no me ayudó'),
-(1018, '07/12/22', 5, 50005, 20550748, 'Mejor que ahorita'),
-(1019, '08/12/22', 4, 50006, 20550387, 'Me siento mas tranquilo'),
-(1021, '2023-01-01', 5, 50005, 20550748, 'pruab del insert'),
-(1022, '21/04/23', 2, 50005, 20550748, 'prueba'),
-(1023, '21/04/23', 2, 50005, 20550748, 'prueba2'),
-(1024, '21/04/23', 3, 50005, 20550789, 'prueba3'),
-(1027, '24/04/23', 2, 50005, 20550748, 'prueba'),
-(1029, '24/04/23', 5, 50005, 12345, 'Mucho mejor'),
-(1030, '24/04/23', 4, 50006, 12345, 'Mejor'),
-(1031, '24/04/23', 3, 50007, 12345, 'Bien'),
-(1033, '24/04/23', 2, 50007, 20550748, 'prueba'),
-(1034, '24/04/23', 2, 50008, 12345, 'Más relajada'),
-(1035, '24/04/23', 1, 50009, 12345, 'Bien bien'),
-(1036, '24/04/23', 5, 50009, 20550731, 'bien'),
-(1037, '27/04/23', 3, 50005, 20550733, 'aegjhjk'),
-(1038, '27/04/23', 2, 50008, 20550733, 'dfloigfcv'),
-(1039, '27/04/23', 5, 50005, 20550748, 'mejor'),
-(1040, '17/05/23', 4, 50009, 20550748, 'bien');
 
 -- --------------------------------------------------------
 
@@ -297,24 +217,6 @@ CREATE TABLE `test` (
   `numControl` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `test`
---
-
-INSERT INTO `test` (`idtest`, `resultados`, `fecha`, `numControl`) VALUES
-(50, 25, '2022-12-06', 20550748),
-(52, 35, '2022-12-07', 20550748),
-(53, 18, '2022-12-07', 20550748),
-(58, 33, '2022-12-08', 20550387),
-(59, 21, '2023-04-21', 20550748),
-(60, 21, '2023-04-21', 20550789),
-(61, 6, '2023-04-24', 12345),
-(62, 12, '2023-04-24', 20550731),
-(63, 11, '2023-04-27', 20550733);
-
---
--- Índices para tablas volcadas
---
 
 --
 -- Indices de la tabla `alumno`
